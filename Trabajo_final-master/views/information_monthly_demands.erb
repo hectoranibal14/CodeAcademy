@@ -1,0 +1,30 @@
+<% if @demands.empty? %>
+  <div class="alert alert-danger" role="alert">
+    <p>There are no closed demands.</p>
+  </div>
+
+<% else %>
+
+  <div class="row justify-content-center" >
+    <div class="col-4">
+      <table class="table table-responsive">
+        <thead>
+          <th>Number</th>
+          <th>Category</th>
+        </thead>
+        <h10>
+          <tbody>
+            <% @demands.each do |demand| %>
+                <tr>
+                    <td><%= demand.contact_id %></td>
+                    <td><%= demand.category %></td>
+                </tr>
+            <% end %>
+          </tbody>
+        </h10>
+      </table>
+    </div>
+  </div>
+<% end %>
+    <hr class="my-4">
+    <p><a class="btn btn-primary" href='/information'>Back to information</a></p>

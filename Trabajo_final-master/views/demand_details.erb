@@ -1,0 +1,70 @@
+<h3>Demand details</h3>
+
+<Form method="post" action="/demand/:contact_id" class="form-control-static">
+
+  <div class="form-group">
+        <label for="number">Number</label>
+        <input type="number" placeholder="<%= @demand.contact_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" name="status" placeholder="<%= @demand.contact_id_state %>">
+  </div>
+
+  <div class="form-group">
+      <label for="category">Open date</label>
+      <input type="text" placeholder="<%= @demand.entry_date %> - <%= @demand.entry_time %>">
+  </div>
+  
+  <div class="form-group">
+    <label for="close_date">Close Date</label>
+    <input type="number" placeholder="<%= @demand.contact_id_close_date %>">
+  </div>
+
+  <div class="form-group">
+      <label for="category">Category</label>
+      <input type="text" placeholder="<%= @demand.category %>">
+  </div>
+
+  <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" placeholder="<%= @demand.provision_type %>">
+  </div>
+
+  <div class="form-group">
+    <label for="commune">Commune</label>
+    <input type="text" placeholder="<%= @demand.cgpc_address %>">
+  </div>
+
+  <div class="form-group">
+    <label for="distrit">Distrit</label>
+      <input type="text" placeholder="<%= @demand.distrit_address %>">
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type"text" placeholder="<%=@demand.street_address %> <%= @demand.number_address %>">
+  </div>
+
+  <div class="form-group">
+    <label for="channel">Channel</label>
+      <input type="text" placeholder="<%= @demand.channel %>">
+  </div>
+  
+  <div class="form-group">
+    <label for="gender">Gender</label>
+      <input type="text" placeholder="<%= @demand.gender %>">
+  </div>
+
+</form>
+
+<hr class="my-4">
+
+<div class="row  justify-content">
+  <div class="col-6" >
+    <p><a class="btn btn-primary" href='/demand/list'>Back to List</a></p>
+    <p><a class="btn btn-primary" href='/'>Back Home</a></p> 
+  </div>
+</div>
+

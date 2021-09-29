@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <table class='table table-hover table-striped'>
+    <h4>Result</h4>
+    <thead>
+        <th>Commune</th>
+        <th>Demands quantity</th>
+        <th>Graphic</th>       
+    </thead>
+    <tbody>
+      <% @demands.each do |commune, quantity| %>
+        <tr>
+          <th><%= commune %></th>
+          <td><%= @demands[commune] || 0 %>
+          <td><%= @graphs[commune].pill %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <hr class="my-4">
+
+    <p><a class="btn btn-primary" href='/statistics'>Back to statistics</a></p>
+  </div>
+</div>

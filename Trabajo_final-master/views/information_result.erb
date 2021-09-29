@@ -1,0 +1,16 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <% if @errors%>
+      <% @errors.each do |error| %>
+        <div class="alert alert-danger" role="alert">
+          <%= error%>
+        </div>
+      <% end %>
+    <% end %>
+    <body class='container' >
+        <h4 > Result:  <%=@result%> </h4 >
+    </body >
+    <hr class="my-4">
+  <p><a class="btn btn-primary" href='/information'>Back to information</a></p>
+  </div>
+</div>
