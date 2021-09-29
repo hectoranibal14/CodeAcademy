@@ -1,0 +1,26 @@
+<div class="row  justify-content-center">
+  <div class="col-6" >
+    <% if @errors%>
+      <% @errors.each do |error| %>
+        <div class="alert alert-danger" role="alert">
+          <%= error%>
+        </div>
+      <% end %>
+    <% end %>
+    
+    <form class="form" action='/cuentas/nueva' method='post'>
+      <div class="form-group">
+        <label for="valorIngresado">Ingrese numero de cuenta:</label>
+        <input required type="number" class="form-control" name="numero_cuenta" placeholder="">
+      </div>
+      <button type='submit' class='btn btn-primary btn-lg'>Crear cuenta</button>
+    </form>
+    <hr class="my-4">
+  </div>
+</div>
+
+<div class="row  justify-content-center">
+  <div class="col-6" >
+    <p><a class="btn btn-primary" href='/'>Cancelar</a></p>
+  </div>
+</div>

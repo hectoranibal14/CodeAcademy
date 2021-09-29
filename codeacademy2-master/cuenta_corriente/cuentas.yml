@@ -1,0 +1,8 @@
+---
+cuentas:
+- !ruby/object:Cuenta_corriente
+  saldo: 0
+  id_cuenta: '1001'
+- !ruby/object:Cuenta_corriente
+  saldo: 0
+  id_cuenta: '1002'

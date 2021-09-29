@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <h4>Listado de cuentas disponibles:</h4>
+    <% if @errors%>
+      <% @errors.each do |error| %>
+        <div class="alert alert-danger" role="alert">
+          <%= error%>
+        </div>
+      <% end %>
+    <% end %>
+
+    <ul>
+        <% @lista_cuentas.each do |dato| %>
+            <li>Id cuenta: <%= dato %></li>
+        <% end %>
+    </ul>
+    <p><a class="btn btn-primary" href='/'>Ir al Inicio</a></p>
+
+  </div>
+
+  <div class="col-4"></div>
+</div>

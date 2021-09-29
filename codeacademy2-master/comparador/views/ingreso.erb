@@ -1,0 +1,23 @@
+<div class="row  justify-content-center">
+  <div class="col-6" >
+    <% if @errors%>
+      <% @errors.each do |error| %>
+        <div class="alert alert-danger" role="alert">
+          <%= error%>
+        </div>
+      <% end %>
+    <% end %>
+  
+    <form class="form" action='/ingresar' method='post'>
+      <div class="form-group">
+        <label for="firstnumber">Primer valor</label>
+        <input required type="number" class="form-control" name="firstnumber" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="secondnumber">Segundo valor</label>
+        <input required type="number" class="form-control" name="secondnumber" placeholder="">
+      </div>
+      <button type='submit' class='btn btn-primary btn-lg'>Submitir</button>
+    </form>
+  </div>
+</div>
